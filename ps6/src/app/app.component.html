@@ -1,0 +1,19 @@
+
+<h1>What's the weather in your city?
+</h1>
+<h2> Select a city: </h2>
+
+<div>
+  <ul *ngFor="let cities of ps4data">
+    <button (click)="setCityName(cities)">{{cities.cityName}}</button>
+  </ul>
+</div>
+
+
+<div *ngIf="chosenCity.degrees">
+  {{chosenCity.cityName}} is <br/>
+  <input type="text" [(ngModel)]="chosenCity.degrees"> degrees.
+
+</div>
+
+
